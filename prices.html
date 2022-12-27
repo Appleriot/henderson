@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. Henderson: The Dissertation Coach LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="pric/style.css">
+</head>
+
+<body>
+    <div id="page-wrapper">
+
+            <!-- Header -->
+                <section id="header" class="wrapper">
+                    <!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li class="current"><a href="index.html">Home</a></li>
+                                <li><a href="prices.html">Pricing</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </nav>
+
+                </section>
+
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+            <table class="pricing-table-box">
+                <tbody>
+                    <tr>
+                        <td width="20%">
+                            <div class="pricing-table-box-item">
+                                <div class="pricing-table-box-item-head color2">
+                                    <p>One on One Coaching</p>
+                                </div>
+                                <div class="pricing-table-box-item-price color2">
+                                    <p>$125<span>/ hr</span></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="20%">
+                            <div class="pricing-table-box-item">
+                                <div class="pricing-table-box-item-head color2">
+                                    <p>Data Analysis</p>
+                                </div>
+                                <div class="pricing-table-box-item-price color2">
+                                    <p>$125<span>/ hr</span></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="20%">
+                            <div class="pricing-table-box-item">
+                                <div class="pricing-table-box-item-head color2">
+                                    <p>Editing</p>
+
+                                </div>
+                                <div class="pricing-table-box-item-price color2">
+                                    <p>$0.04<span> per word</span></p>
+
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Research topic brainstorming</td>
+                        <td class="second-row">Recommendations and consult for data transcription</span></td>
+                        <td class="third-row">Paragraph formatting</span></td>
+                    </tr>
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Academic writing guidance</td>
+                        <td class="second-row">Assess and create a data analysis plan</td>
+                        <td class="third-row">Headings</td>
+                    </tr>
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Develop/Improve research questions</td>
+                        <td class="second-row">Recommendation and thorough consult<br> on data analysis software</td>
+                        <td class="third-row">Table of Contents</td>
+                    </tr>
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Develop/ improve theoretical &amp; conceptual framework</td>
+                        <td class="second-row">Recommendation and thorough<br> consultation on the interpretation<br> of results</td>
+                        <td class="third-row">Numbers</td>
+                    </tr>
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Fine tune research design</td>
+                        <td class="third-row">Tables and figures</td>
+                    </tr>
+                    <tr class="pricing-table-box-list">
+                        <td class="first-row">Guidance on data collection/analysis</td>
+                    </tr>
+                        <td class="third-row">
+                            <div id="smart-button-container">
+      <div style="text-align: center;">
+
+    </div>
+   <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+  <!-- Set up a container element for the button -->
+  <div id="paypal-button-container"></div>
+  <script>
+    paypal.Buttons({
+      // Sets up the transaction when a payment button is clicked
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '77.44' // Can also reference a variable or function
+            }
+          }]
+        });
+      },
+      // Finalize the transaction after payer approval
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(function(orderData) {
+          // Successful capture! For dev/demo purposes:
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const transaction = orderData.purchase_units[0].payments.captures[0];
+          alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+          // When ready to go live, remove the alert and show a success message within this page. For example:
+          // const element = document.getElementById('paypal-button-container');
+          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          // Or go to another URL:  actions.redirect('thank_you.html');
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="height:50px;clear:both;">
+
+        </div>
+
+    </div>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+</body>
+</html>
